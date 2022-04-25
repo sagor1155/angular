@@ -36,6 +36,7 @@ export class TestComponent implements OnInit {
     fontStyle: 'italic'
   }
   public msg1: string = "button-1 not clicked"
+  public inputMessage = "some msg";
 
   constructor() { }
 
@@ -50,6 +51,10 @@ export class TestComponent implements OnInit {
     console.log(event)
     this.msg1 = "button clicked"
     this.hasError = true
+  }
+
+  logMessage(msg: string){
+    console.log(msg)
   }
 
 }

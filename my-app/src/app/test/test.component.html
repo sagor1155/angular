@@ -36,9 +36,25 @@
 
 
 <!-- Event Binding -->
-<button (click)="onClick($event)">Press</button>
-<br>
-{{msg1}}
-<br>
+<div>
+    <button (click)="onClick($event)">Press</button>
+    {{msg1}}
+</div>
 <!-- add template statement instead of event handler -->
-<button (click)="hasError=false">Assign</button>
+<div>
+    <button (click)="hasError=false">Assign</button>
+</div>
+
+
+<!-- template reference variables -->
+<div>
+    <input #myInput type="text">
+    <button (click)="logMessage(myInput.value)">Log</button>    
+</div>
+
+
+<!-- two way binding -->
+<div>
+    <input [(ngModel)]="inputMessage" type="text" name="" id="">
+    {{inputMessage}}    
+</div>
