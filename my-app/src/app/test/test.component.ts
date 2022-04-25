@@ -20,6 +20,16 @@ export class TestComponent implements OnInit {
   public siteUrl: string = window.location.href;
   public myId: string = "testId";
   public isDisabled: boolean = true;
+  public successClass = "text-success";
+  public dangerClass = "text-danger";
+  public specialClass = "text-special";
+  public hasError = true;
+  public isSpecial = true;
+  public messageClasses = {
+    "text-success": !this.hasError,
+    "text-danger": this.hasError,
+    "text-special": this.isSpecial 
+  };
 
   constructor() { }
 
