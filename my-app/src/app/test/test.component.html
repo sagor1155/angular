@@ -1,6 +1,6 @@
 <h1>Test works!</h1>
 
-<!-- interpolation -->
+<!-- data binding/interpolation -->
 <!-- interpolation only works with string -->
 <p>{{name}}</p>
 <p>{{"Welcome to " + name.toUpperCase() + " world"}}</p>
@@ -9,10 +9,12 @@
 <p>{{"Site URL: " + siteUrl}}</p>
 <input id="{{myId}}" type="text" value="dhiman">
 
+
 <!-- property binding -->
 <!-- works with string, boolean and other types -->
 <input [id]="myId" type="text" value="sarker">
 <input [disabled]="isDisabled" type="text" value="sagor">
+
 
 <!-- class binding -->
 <h2 class="text-success">Angular Framework</h2>
@@ -24,9 +26,19 @@
 <!-- conditionally apply multiple classes using ngClass directive -->
 <h2 [ngClass]="messageClasses">Bind Multiple Class</h2>
 
+
 <!-- style binding -->
 <!-- used to apply inline styles to html elements (similar to class binding) -->
 <h2 [style.color]="hasError ? 'orange' : 'blue'">Style binding</h2>
 <h2 [style.color]="hasError ? highlightColor : 'blue'">Style binding</h2>
 <!-- apply multiple style using ngStyle directive -->
 <h2 [ngStyle]="titleStyle">Multiple Styles</h2>
+
+
+<!-- Event Binding -->
+<button (click)="onClick($event)">Press</button>
+<br>
+{{msg1}}
+<br>
+<!-- add template statement instead of event handler -->
+<button (click)="hasError=false">Assign</button>

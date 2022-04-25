@@ -35,6 +35,7 @@ export class TestComponent implements OnInit {
     color: 'blue',
     fontStyle: 'italic'
   }
+  public msg1: string = "button-1 not clicked"
 
   constructor() { }
 
@@ -43,6 +44,12 @@ export class TestComponent implements OnInit {
 
   greetUser(){
     return "Hello! " + this.name.toUpperCase()
+  }
+
+  onClick(event: any){
+    console.log(event)
+    this.msg1 = "button clicked"
+    this.hasError = true
   }
 
 }
