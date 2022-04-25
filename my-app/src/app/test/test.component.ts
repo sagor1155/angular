@@ -30,6 +30,11 @@ export class TestComponent implements OnInit {
     "text-danger": this.hasError,
     "text-special": this.isSpecial 
   };
+  public highlightColor = 'orange';
+  public  titleStyle = {
+    color: 'blue',
+    fontStyle: 'italic'
+  }
 
   constructor() { }
 
