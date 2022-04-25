@@ -16,9 +16,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
+  public name: string = "Daemons";
+  public siteUrl: string = window.location.href
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  greetUser(){
+    return "Hello! " + this.name.toUpperCase()
   }
 
 }
