@@ -17,7 +17,10 @@ import { Component, OnInit } from '@angular/core';
 export class TestComponent implements OnInit {
 
   public name: string = "Daemons";
-  public siteUrl: string = window.location.href
+  public siteUrl: string = window.location.href;
+  public myId: string = "testId";
+  public isDisabled: boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {

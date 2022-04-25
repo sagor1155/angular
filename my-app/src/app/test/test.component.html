@@ -1,6 +1,15 @@
 <p>test works!</p>
+
+<!-- interpolation -->
+<!-- interpolation only works with string -->
 <p>{{name}}</p>
 <p>{{"Welcome to " + name.toUpperCase() + " world"}}</p>
 <p>{{2+2}}</p>
 <p>{{greetUser()}}</p>
 <p>{{siteUrl}}</p>
+<input id="{{myId}}" type="text" value="dhiman">
+
+<!-- property binding -->
+<!-- works with string, boolean and other types -->
+<input [id]="myId" type="text" value="sarker">
+<input [disabled]="isDisabled" type="text" value="sagor">
