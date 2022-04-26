@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 
 // decorators 
 @Component({
@@ -16,7 +16,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  public name: string = "Daemons";
+  // public name: string = "Daemons";
   public siteUrl: string = window.location.href;
   public myId: string = "testId";
   public isDisabled: boolean = true;
@@ -41,6 +41,12 @@ export class TestComponent implements OnInit {
   public color = "blue";
   public colors: Array<string> = ['red', 'green', 'blue', 'yellow'];
 
+  // parent to child data interaction
+  @Input("parentData") public name: any;
+
+  // child to parent data interaction
+  @Output() public childEvent = new EventEmitter()
+
   constructor() { }
 
   ngOnInit(): void {
@@ -60,4 +66,7 @@ export class TestComponent implements OnInit {
     console.log(msg)
   }
 
+  fireEvent(){
+    this.childEvent.emit("Hey Codevolution")
+  }
 }

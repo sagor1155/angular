@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-angular-app';
+  public name = "mac rose"
+  public message: any = "default message"
 }
