@@ -37,6 +37,9 @@ export class TestComponent implements OnInit {
   }
   public msg1: string = "button-1 not clicked"
   public inputMessage = "some msg";
+  public displayName = false;
+  public color = "blue";
+  public colors: Array<string> = ['red', 'green', 'blue', 'yellow'];
 
   constructor() { }
 

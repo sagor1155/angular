@@ -1,60 +1,86 @@
-<h1>Test works!</h1>
+<!-- <h1>Test works!</h1>
 
 <!-- data binding/interpolation -->
 <!-- interpolation only works with string -->
-<p>{{name}}</p>
+<!-- <p>{{name}}</p>
 <p>{{"Welcome to " + name.toUpperCase() + " world"}}</p>
 <p>{{"2+2 = " + (2+2)}}</p>
 <p>{{greetUser()}}</p>
 <p>{{"Site URL: " + siteUrl}}</p>
-<input id="{{myId}}" type="text" value="dhiman">
+<input id="{{myId}}" type="text" value="dhiman"> -->
 
 
 <!-- property binding -->
 <!-- works with string, boolean and other types -->
-<input [id]="myId" type="text" value="sarker">
-<input [disabled]="isDisabled" type="text" value="sagor">
+<!-- <input [id]="myId" type="text" value="sarker">
+<input [disabled]="isDisabled" type="text" value="sagor"> -->
 
 
 <!-- class binding -->
-<h2 class="text-success">Angular Framework</h2>
+<!-- <h2 class="text-success">Angular Framework</h2>
 <h2 [class]="dangerClass">Angular Framework</h2>
 <h2 [class]="successClass">Angular Framework</h2>
-<h2 [class]="specialClass">Angular Framework</h2>
+<h2 [class]="specialClass">Angular Framework</h2> -->
 <!-- conditionally apply class -->
-<h2 [class.text-danger]="hasError">Angular Framework</h2>
+<!-- <h2 [class.text-danger]="hasError">Angular Framework</h2> -->
 <!-- conditionally apply multiple classes using ngClass directive -->
-<h2 [ngClass]="messageClasses">Bind Multiple Class</h2>
+<!-- <h2 [ngClass]="messageClasses">Bind Multiple Class</h2> -->
 
 
 <!-- style binding -->
 <!-- used to apply inline styles to html elements (similar to class binding) -->
-<h2 [style.color]="hasError ? 'orange' : 'blue'">Style binding</h2>
-<h2 [style.color]="hasError ? highlightColor : 'blue'">Style binding</h2>
+<!-- <h2 [style.color]="hasError ? 'orange' : 'blue'">Style binding</h2>
+<h2 [style.color]="hasError ? highlightColor : 'blue'">Style binding</h2> -->
 <!-- apply multiple style using ngStyle directive -->
-<h2 [ngStyle]="titleStyle">Multiple Styles</h2>
+<!-- <h2 [ngStyle]="titleStyle">Multiple Styles</h2> -->
 
 
 <!-- Event Binding -->
-<div>
+<!-- <div>
     <button (click)="onClick($event)">Press</button>
     {{msg1}}
-</div>
+</div> -->
 <!-- add template statement instead of event handler -->
-<div>
+<!-- <div>
     <button (click)="hasError=false">Assign</button>
-</div>
+</div> -->
 
 
 <!-- template reference variables -->
-<div>
+<!-- <div>
     <input #myInput type="text">
     <button (click)="logMessage(myInput.value)">Log</button>    
-</div>
+</div> -->
 
 
 <!-- two way binding -->
 <div>
     <input [(ngModel)]="inputMessage" type="text" name="" id="">
     {{inputMessage}}    
+</div>
+
+
+<!-- ngIf directive -->
+<h2 *ngIf="displayName; else elseBlock">
+    Codevolution
+</h2>
+<ng-template #elseBlock>
+    <h2>
+        Name is hidden
+    </h2>
+</ng-template>
+
+
+<!-- ngSwitch directive -->
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'">You picked up red</div>
+    <div *ngSwitchCase="'green'">You picked up green</div>
+    <div *ngSwitchCase="'blue'">You picked up blue</div>
+    <div *ngSwitchDefault>You picked up nothing</div>
+</div>
+
+
+<!-- ngFor directive -->
+<div *ngFor="let color of colors; index as i">
+    <h3>{{i}} {{color}}</h3>
 </div>
