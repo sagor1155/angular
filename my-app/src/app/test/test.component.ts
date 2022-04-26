@@ -40,6 +40,11 @@ export class TestComponent implements OnInit {
   public displayName = false;
   public color = "blue";
   public colors: Array<string> = ['red', 'green', 'blue', 'yellow'];
+  public person = {
+    "name": "amanda",
+    "email": "amanda@ftdr.com"
+  }
+  public date = new Date()
 
   // parent to child data interaction
   @Input("parentData") public name: any;

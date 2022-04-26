@@ -100,3 +100,23 @@
     <button (click)="fireEvent()">Emit</button>
 </div>
 
+
+<!-- pipes -->
+<!-- pipes allow us to transform data before displaying them -->
+<div style="display: block;">
+    <h3>{{ name }}</h3>
+    <h3>{{ name | uppercase }}</h3>
+    <h3>{{ name | lowercase }}</h3>
+    <h3>{{ name | titlecase }}</h3>
+    <h3>{{ name | slice:4:8 }}</h3>
+    <h3>{{ person | json }}</h3>
+    <h3>{{ 5.678 | number:'1.2-3' }}</h3>
+    <h3>{{ 5.678 | number:'3.1-2' }}</h3>
+    <h3>{{ 5.678 | number:'1.5-6' }}</h3>
+    <h3>{{ 0.25 | percent }}</h3>
+    <h3>{{ 30 | currency }}</h3>
+    <h3>{{ 30 | currency: 'BDT' }}</h3>
+    <h3>{{ date | date:'short' }}</h3>
+    <h3>{{ date | date:'shortDate' }}</h3>
+    <h3>{{ date | date:'shortTime' }}</h3>
+</div>
