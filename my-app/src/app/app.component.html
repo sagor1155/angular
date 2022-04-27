@@ -1,10 +1,18 @@
-<div style="text-align: center"> 
-  <h1> Welcome to {{title}} </h1>
-  <h2>{{message}}</h2>
+<div style="text-align: center">
+  <h1>Routing & Navigation</h1> 
+  <!-- <h1> Welcome to {{title}} </h1>
+  <h2>{{message}}</h2> -->
 </div>
 
-<div>
+<!-- <div>
   <app-test (childEvent)="message=$event" [parentData]="name"></app-test>
   <app-employee-list></app-employee-list>
   <app-employee-detail></app-employee-detail>
-</div>
+</div> -->
+
+<nav>
+  <a routerLink="/dept" routerLinkActive="active">Departments</a>
+  <a routerLink="/emp" routerLinkActive="active">Employees</a>
+</nav>
+
+<router-outlet></router-outlet>
