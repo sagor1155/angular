@@ -1,19 +1,17 @@
 import { Injectable } from '@angular/core';
 import { IEmployee } from './employee';
+import { HttpClient } from '@angular/common/http'
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
 
-  constructor() { }
+  private url = '/assets/data/employees.json'
+  constructor(private http: HttpClient) { }
 
-  getList(){
-    return [
-      {"id": 1, "name": "A", "email": "a@example.com"},
-      {"id": 2, "name": "B", "email": "b@example.com"},
-      {"id": 3, "name": "C", "email": "c@example.com"},
-      {"id": 4, "name": "D", "email": "d@example.com"}
-    ]
+  getList(): Observable<IEmployee[]>{
+    return this.http.get<IEmployee[]>(this.url)
   }
 }
