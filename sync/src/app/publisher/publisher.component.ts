@@ -2,13 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { MessagePublishService } from '../message-publish.service'
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-publisher',
+  templateUrl: './publisher.component.html',
+  styleUrls: ['./publisher.component.css']
 })
-export class HeaderComponent implements OnInit {
-
-  public message: string = "message from header"
+export class PublisherComponent implements OnInit {
+  public message: string = "message from publisher"
 
   constructor(private pubService: MessagePublishService) { }
 

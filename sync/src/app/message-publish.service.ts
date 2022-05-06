@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MessagePublishService {
-  private obs = new Subject<string>()
+  private obs = new BehaviorSubject<string>("initial value")
 
   constructor() { }
 
@@ -14,7 +14,7 @@ export class MessagePublishService {
   }
 
   getSubject(): Observable<string>{
-    return this.obs
+    return this.obs.asObservable()
   }
 
 }

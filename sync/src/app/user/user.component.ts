@@ -13,7 +13,11 @@ export class UserComponent implements OnInit {
   constructor(private pubService: MessagePublishService) { }
 
   ngOnInit(): void {
+  }
+
+  subscribe(){
     this.pubService.getSubject().subscribe(data => this.msg=data)
   }
 
 }
+

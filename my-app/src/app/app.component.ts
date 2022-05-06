@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { of, Observable, throttleTime, interval, fromEvent } from 'rxjs';
-import { filter, map } from 'rxjs/operators'; 
+import { filter, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,6 @@ export class AppComponent implements OnInit {
   constructor(){}
 
   ngOnInit(): void {
-    // let testInput = document.getElementById('test_input')
   }
 
   onTest(){
