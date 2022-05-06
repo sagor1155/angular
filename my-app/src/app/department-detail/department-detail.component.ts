@@ -10,7 +10,7 @@ export class DepartmentDetailComponent implements OnInit {
 
   public departmentId: any;
   constructor(private route: ActivatedRoute, private router: Router) { }
-
+ 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) => {
       let id = parseInt(params.get('id')||"")

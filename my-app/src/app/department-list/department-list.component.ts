@@ -23,7 +23,7 @@ export class DepartmentListComponent implements OnInit {
     this.route.paramMap.subscribe((params: ParamMap) => {
       let id = parseInt(params.get('id')||"")
       if (isNaN(id)) {
-        console.log("id not a number")
+        // console.log("id not a number")
       }else{
         this.selectedId = id
       }
