@@ -1,4 +1,4 @@
-import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 // decorators 
 @Component({
@@ -14,7 +14,7 @@ import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
   // instead of styleUrls we can use 'styles'
   // styles: [`div {color: blue;}`]
 })
-export class TestComponent implements OnInit {
+export class TestComponent {
 
   // public name: string = "Daemons";
   public siteUrl: string = window.location.href;
@@ -54,8 +54,8 @@ export class TestComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  // ngOnInit(): void {
+  // }
 
   greetUser(){
     return "Hello! " + this.name.toUpperCase()
