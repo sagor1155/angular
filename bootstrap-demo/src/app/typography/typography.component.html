@@ -1,0 +1,76 @@
+<div class="container mb-3">
+    <h4><ins>Text alignment</ins></h4>
+    <p class="text-start">Left aligned text on all viewport sizes.</p>
+    <p class="text-center">Center aligned text on all viewport sizes.</p>
+    <p class="text-end">Right aligned text on all viewport sizes.</p>
+</div>
+
+<!-- Block level element -->
+<div class="container mb-3">
+    <h4><ins>Text truncate:</ins> Block level element</h4>
+    <div class="row">
+        <div class="col-2 text-truncate">
+            The quick brown fox jumps over the lazy dog.
+        </div>
+    </div>
+</div>
+
+<!-- Inline level element -->
+<div class="container mb-3">
+    <h4><ins>Text truncate:</ins> Inline level element</h4>
+    <div>
+        <span class="d-inline-block text-truncate" style="max-width: 160px;">
+            The quick brown fox jumps over the lazy dog.
+        </span>    
+    </div>
+</div>
+
+<!-- text wrapping -->
+<div class="container mb-3">
+    <h4><ins>Text wrapping</ins></h4>
+    
+    <button class="btn btn-sm btn-secondary me-2 mb-2 p-1" (click)="toggleCodeShow()"> {{ (codeHidden)?'Show code':'Hide code' }}</button>
+    <br>
+
+    <code>
+        <textarea class="form-control text-info mb-3" [class.visually-hidden]="codeHidden" rows="8" disabled="true">
+            
+            <div class="badge bg-primary text-wrap mb-1" style="width: 6rem;">
+                this text will wrap
+            </div>
+            <br>
+            <div class="badge bg-warning text-muted text-nowrap" style="width: 6rem;">
+                this text will not wrap (overflow)
+            </div>
+        </textarea>
+    </code>
+
+    <div class="badge bg-primary text-wrap mb-1" style="width: 6rem;">
+        this text will wrap
+    </div>
+    <br>
+    <div class="badge bg-warning text-muted text-nowrap" style="width: 6rem;">
+        this text will not wrap (overflow)
+    </div>
+</div>
+
+
+<!-- text break -->
+<div class="container mb-3">
+    <h4><ins>Text break</ins></h4>
+    <div class="row ms-1">
+        <div class="col-2 bg-secondary">
+            <p class="text-break">very very very very very very very long word</p>
+        </div>
+    </div>    
+</div>
+
+<div class="container">
+    <h4><ins>Blockquote</ins></h4>
+    <figure>
+        <blockquote class="blockquote">
+            <p>The world is a dangerous place to live; not because of the people who are evil, but because of the people who don't do anything about it.</p>
+        </blockquote>
+        <figcaption class="blockquote-footer"><cite>Albert Einstein</cite></figcaption>
+    </figure>
+</div>

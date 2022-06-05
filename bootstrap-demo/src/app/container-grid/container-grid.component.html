@@ -1,0 +1,101 @@
+
+<div class="container mb-3">
+    <h4><ins>Column Layouts</ins></h4>
+    <div class="row">
+        <div class="col-md-6 bg-success text-center py-3">column left</div>
+        <div class="col-md-6 bg-warning text-center py-3">column right</div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 bg-success text-center">column left</div>
+        <div class="col-md-8 bg-warning text-center">column right</div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 bg-success text-center">column left</div>
+        <div class="col-md-4 bg-dark text-center">column mid</div>
+        <div class="col-md-4 bg-warning text-center">column right</div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 bg-dark text-white">.col-md-4 .col-lg-3</div>
+        <div class="col-md-8 bg-primary">.col-md-8 .col-lg-6</div>
+        <div class="col-md-12 bg-danger">.col-md-12 .col-lg-3</div>
+    </div>
+</div>
+
+<div class="container-lg mb-3">
+    <h4><ins>Responsive column layouts for different viewport </ins></h4>
+    <div class="row">
+        <div class="col-xl-4 col-md-6 col-xxl-3"><p class="bg-dark text-white p-2 m-2">Box 1</p></div>
+        <div class="col-xl-4 col-md-6 col-xxl-3"><p class="bg-dark text-white p-2 m-2">Box 2</p></div>
+        <div class="col-xl-4 col-md-6 col-xxl-3"><p class="bg-dark text-white p-2 m-2">Box 3</p></div>
+        <div class="col-xl-4 col-md-6 col-xxl-3"><p class="bg-dark text-white p-2 m-2">Box 4</p></div>
+        <div class="col-xl-4 col-md-6 col-xxl-3"><p class="bg-dark text-white p-2 m-2">Box 5</p></div>
+        <div class="col-xl-4 col-md-6 col-xxl-3"><p class="bg-dark text-white p-2 m-2">Box 6</p></div>
+        <div class="col-xl-4 col-md-6 col-xxl-3"><p class="bg-dark text-white p-2 m-2">Box 7</p></div>
+        <div class="col-xl-4 col-md-6 col-xxl-3"><p class="bg-dark text-white p-2 m-2">Box 8</p></div>
+        <div class="col-xl-4 col-md-6 col-xxl-3"><p class="bg-dark text-white p-2 m-2">Box 9</p></div>
+        <div class="col-xl-4 col-md-6 col-xxl-3"><p class="bg-dark text-white p-2 m-2">Box 10</p></div>
+        <div class="col-xl-4 col-md-6 col-xxl-3"><p class="bg-dark text-white p-2 m-2">Box 11</p></div>
+        <div class="col-xl-4 col-md-6 col-xxl-3"><p class="bg-dark text-white p-2 m-2">Box 12</p></div>
+    </div>
+</div>
+
+<div class="container-lg mb-3">
+    <h4><ins>Nested rows and columns</ins></h4>
+    <div class="row">
+        <div class="col-sm-6 bg-dark text-white p-2 align-self-center">Column left</div>
+
+        <div class="col-sm-6">
+            <!--Column right with nested rows and columns-->
+            <div class="row">
+                <div class="col-12 bg-primary p-2">c-r r-1 c-1</div>
+            </div>
+            <div class="row">
+                <div class="col-6 bg-success p-2">c-r r-2 c-1</div>
+                <div class="col-6 bg-warning p-2">c-r r-2 c-2</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-3">
+    <h4><ins>Horizontal Alignment</ins></h4>
+    <div class="row justify-content-center align-items-center bg-secondary mt-2" style="min-height: 10rem;">
+        <div class="col-md-3 border p-3">Column left</div>
+        <div class="col-md-auto border p-3">Variable width column</div>
+        <div class="col-md-3 border p-3">Column right</div>
+    </div>
+    <div class="row bg-primary mt-2" style="min-height: 10rem;">
+        <div class="col border p-3 align-self-start">Column left</div>
+        <div class="col-auto border p-3 align-self-center">Variable width column</div>
+        <div class="col border p-3 align-self-end">Column right</div>
+    </div>
+
+    <div class="row bg-primary mt-2 justify-content-end">
+        <div class="col-4 border p-3">Column left</div>
+        <div class="col-4 border p-3">Column right</div>
+    </div>
+
+    <div class="row bg-primary mt-2 justify-content-around">
+        <div class="col-4 border p-3">Column left</div>
+        <div class="col-4 border p-3">Column right</div>
+    </div>
+
+    <div class="row bg-primary mt-2 justify-content-between">
+        <div class="col-4 border p-3">Column left</div>
+        <div class="col-4 border p-3">Column right</div>
+    </div>
+    
+    <div class="row bg-primary mt-2 justify-content-between">
+        <div class="col-4 border p-3 offset-sm-2">Column left</div>
+        <div class="col-4 border p-3">Column right</div>
+    </div>
+
+    <div class="row g-0 mt-2">
+        <div class="col-4 bg-primary">Column one</div>
+        <div class="col-4 bg-secondary">Column two</div>
+        <div class="col-4 bg-success">Column three</div>
+    </div>
+</div>
