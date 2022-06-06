@@ -3,12 +3,23 @@
     <form class="col-6">
         <div class="mb-3">
             <label class="form-label" for="inputEmail">Email</label>
-            <input class="form-control" type="email" id="inputEmail" placeholder="Email">
+            <input class="form-control form-control-md" type="email" id="inputEmail" placeholder="Email">
         </div>
 
         <div class="mb-3">
             <label class="form-label" for="inputPass">Password</label>
-            <input class="form-control" type="password" id="inputPass" placeholder="Password">
+            <input class="form-control form-control-md" type="password" id="inputPass" placeholder="Password">
+            <div class="form-text text-warning">
+                Must be 8-10 characters long
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="selectGender">Gender</label>
+            <select class="form-select form-select-md" aria-label="gender" id="selectGender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
         </div>
 
         <div class="mb-3">
@@ -94,17 +105,17 @@
         <div class="row align-items-center">
 
             <div class="col-md-auto col-12">
-                <input class="form-control" type="email" id="inputEmail3" placeholder="Email">
+                <input class="form-control" type="email" id="inputEmail4" placeholder="Email">
             </div>
         
             <div class="col-md-auto col-12">
-                <input class="form-control" type="password" id="inputPass3" placeholder="Password">
+                <input class="form-control" type="password" id="inputPass4" placeholder="Password">
             </div>
         
             <div class="col-md-auto col-12">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="checkRemember3">
-                    <label class="form-check-label" for="checkRemember3">Remember me</label>
+                    <input class="form-check-input" type="checkbox" id="checkRemember4">
+                    <label class="form-check-label" for="checkRemember4">Remember me</label>
                 </div>
             </div>
         
@@ -113,5 +124,29 @@
             </div>
         
         </div>
+    </form>
+</div>
+
+
+<div class="container mb-3">
+    <h4><ins>Form validation</ins></h4>
+    <form>
+        <div class="mb-3">
+            <label class="form-label" for="inputEmail6">Email</label>
+            <input type="email" class="form-control is-valid" id="inputEmail6" placeholder="Email" value="peterparker@example.com" required>
+            <div class="valid-feedback">Good! Your email address looks valid.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="inputPassword6">Password</label>
+            <input type="password" class="form-control is-invalid" id="inputPassword6" placeholder="Password" required>
+            <div class="invalid-feedback">Opps! You have entered an invalid password.</div>
+        </div>
+        <div class="mb-3">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="checkRemember6">
+                <label class="form-check-label" for="checkRemember6">Remember me</label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
     </form>
 </div>
