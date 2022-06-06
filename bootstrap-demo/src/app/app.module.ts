@@ -9,6 +9,7 @@ import { TypographyComponent } from './typography/typography.component';
 import { TableComponent } from './table/table.component';
 import { ListGroupComponent } from './list-group/list-group.component';
 import { FormsComponent } from './forms/forms.component';
+import { InputGroupComponent } from './input-group/input-group.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsComponent } from './forms/forms.component';
     TypographyComponent,
     TableComponent,
     ListGroupComponent,
-    FormsComponent
+    FormsComponent,
+    InputGroupComponent
   ],
   imports: [
     BrowserModule,
