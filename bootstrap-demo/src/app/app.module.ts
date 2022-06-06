@@ -8,6 +8,7 @@ import { ContainerGridComponent } from './container-grid/container-grid.componen
 import { TypographyComponent } from './typography/typography.component';
 import { TableComponent } from './table/table.component';
 import { ListGroupComponent } from './list-group/list-group.component';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ListGroupComponent } from './list-group/list-group.component';
     ContainerGridComponent,
     TypographyComponent,
     TableComponent,
-    ListGroupComponent
+    ListGroupComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
