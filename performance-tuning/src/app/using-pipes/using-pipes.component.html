@@ -1,0 +1,10 @@
+<!-- without pipes -->
+<!-- <div *ngFor="let element of elements">
+    <p>{{ getFullSymbol(element.symbol) }}</p>
+</div> -->
+<!-- <p>{{getFullSymbol('H')}}</p> -->
+
+<!-- with pipes -->
+<div *ngFor="let element of elements">
+    <p>{{ element.symbol | getSymbol }}</p>
+</div>
