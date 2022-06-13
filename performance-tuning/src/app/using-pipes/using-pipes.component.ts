@@ -1,13 +1,21 @@
-import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges, DoCheck, AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-using-pipes',
   templateUrl: './using-pipes.component.html',
   styleUrls: ['./using-pipes.component.css']
 })
-export class UsingPipesComponent implements OnInit, OnChanges {
+export class UsingPipesComponent implements
+  OnChanges,
+  OnInit,
+  DoCheck,
+  AfterContentInit,
+  AfterContentChecked,
+  AfterViewInit,
+  AfterViewChecked,
+  OnDestroy {
 
-  elements: {symbol: string}[] = [
+  elements: { symbol: string }[] = [
     { symbol: 'H' },
     { symbol: 'He' },
     { symbol: 'Li' },
@@ -16,13 +24,39 @@ export class UsingPipesComponent implements OnInit, OnChanges {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnChanges() {
+    console.log('Trace OnChanges');
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnInit() {
+    console.log('Trace onInit');
   }
 
-  getFullSymbol(symbol: string): string{
+  ngDoCheck() {
+    console.log('Trace doCheck');
+  }
+
+  ngAfterContentInit() {
+    console.log('Trace After Content Init');
+  }
+
+  ngAfterContentChecked() {
+    console.log('Trace after content checked');
+  }
+
+  ngAfterViewInit() {
+    console.log('Trace after view init');
+  }
+
+  ngAfterViewChecked() {
+    console.log('Trace after view checked');
+  }
+
+  ngOnDestroy() {
+    console.log('Trace on destroy');
+  }
+
+  getFullSymbol(symbol: string): string {
     console.log('calling getFullSymbol');
     let fullSymbol = '';
     switch (symbol) {

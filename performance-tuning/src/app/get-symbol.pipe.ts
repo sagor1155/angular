@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'getSymbol'
+  name: 'getSymbol',
+  pure: false
 })
 export class GetSymbolPipe implements PipeTransform {
 
