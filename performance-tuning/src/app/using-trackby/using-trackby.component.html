@@ -1,0 +1,6 @@
+<button (click)="updateData()" style="margin: 10px; padding: 10px;">Update</button>
+<ul>
+    <li *ngFor="let element of elements; trackBy: trackByFn">
+        {{ element.symbol | getSymbol }}
+    </li>
+</ul>
