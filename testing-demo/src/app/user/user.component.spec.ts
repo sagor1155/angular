@@ -1,4 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { DataService } from '../data.service';
 import { UserService } from '../user.service';
 
 import { UserComponent } from './user.component';
@@ -47,4 +48,21 @@ describe('UserComponent', () => {
     let template = fixture.debugElement.nativeElement;
     expect(template.querySelector('p').textContent).not.toContain(component.user.name);
   })
+
+  it('shouldn\'t fetch data successfully if not called asynchronously', () => {
+    let dataService = fixture.debugElement.injector.get(DataService);
+    spyOn(dataService, <never>'getDetails').and.returnValue(<never>Promise.resolve('Data'));
+    fixture.detectChanges();
+    expect(component.data).not.toBeDefined();
+  })
+
+  it('should fetch data successfully if called asynchronously', async(() => {
+    let dataService = fixture.debugElement.injector.get(DataService);
+    spyOn(dataService, <never>'getDetails').and.returnValue(<never>Promise.resolve('Some data'));
+    fixture.detectChanges();
+    fixture.whenStable().then(() => {
+      expect(component.data).toBe('Data');
+    })
+  }))
+
 });
