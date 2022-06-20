@@ -1,0 +1,25 @@
+<div class="container my-2 p-2 bg-secondary text-white rounded-2">
+  <div class="row">
+    <div class="col-sm-1">{{ todo.id }}</div>
+    <div class="col-sm-4">{{ todo.text }}</div>
+    <div class="col-sm-2">{{ todo.isCompleted }}</div>
+    <div class="col-sm-2">
+      <input (click)="changeText()" type="button" class="btn btn-sm btn-warning me-2" value="ChangeText">
+    </div>
+    <div class="col-sm-2">
+      <input (click)="changeFilter()" type="button" class="btn btn-sm btn-warning me-2" value="ChangeFilter">
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  Check Render: {{ checkRender() }}
+</div>
+
+<div class="container">
+  Filter: {{ filter$ | async }}
+</div>
+
+<div class="container">
+  Test Data: {{ testData }}
+</div>

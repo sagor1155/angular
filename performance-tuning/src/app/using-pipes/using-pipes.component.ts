@@ -1,9 +1,10 @@
-import { Component, OnInit, OnChanges, SimpleChanges, DoCheck, AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges, DoCheck, AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-using-pipes',
   templateUrl: './using-pipes.component.html',
-  styleUrls: ['./using-pipes.component.css']
+  styleUrls: ['./using-pipes.component.css'],
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class UsingPipesComponent implements
   OnChanges,
